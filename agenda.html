@@ -1,0 +1,25 @@
+---
+layout: default
+title: Agenda
+description: Agenda dan kegiatan GTM Jemaat Elim Lebbeng.
+permalink: /agenda/
+---
+<section class="page-hero">
+  <div class="container narrow">
+    <p class="eyebrow">Mari berjumpa</p>
+    <h1>Agenda mendatang.</h1>
+    <p class="lead">Catat waktunya dan ajak seseorang berjalan bersamamu.</p>
+  </div>
+</section>
+<section class="page-content">
+  <div class="container event-list">
+    {% assign sorted_events = site.events | sort: "date" %}
+    {% for event in sorted_events %}
+      <a class="event-row" href="{{ event.url | relative_url }}">
+        <div class="event-date"><strong>{{ event.date | date: "%d" }}</strong><span>{{ event.date | date: "%b" }}</span></div>
+        <div><small>{{ event.category }}</small><h2>{{ event.title }}</h2><p>{{ event.time }} · {{ event.location }}</p></div>
+        <span class="round-arrow">→</span>
+      </a>
+    {% endfor %}
+  </div>
+</section>

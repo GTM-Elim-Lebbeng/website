@@ -1,0 +1,30 @@
+---
+layout: default
+title: Renungan
+description: Renungan dan kabar terbaru dari GTM Jemaat Elim Lebbeng.
+permalink: /renungan/
+---
+<section class="page-hero">
+  <div class="container narrow">
+    <p class="eyebrow">Bekal perjalanan</p>
+    <h1>Firman untuk<br>keseharian.</h1>
+    <p class="lead">Tulisan sederhana untuk menolong kita melihat karya Tuhan di tengah hidup sehari-hari.</p>
+  </div>
+</section>
+<section class="journal-section archive-section">
+  <div class="container">
+    <div class="post-grid">
+      {% for post in site.posts %}
+      <article class="post-card">
+        <a class="post-visual visual-{{ forloop.index | modulo: 3 | plus: 1 }}" href="{{ post.url | relative_url }}"><span>{{ post.category }}</span></a>
+        <div class="post-card-body">
+          <small>{{ post.date | date: "%d.%m.%Y" }}</small>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+          <a class="text-link" href="{{ post.url | relative_url }}">Baca renungan <span>→</span></a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

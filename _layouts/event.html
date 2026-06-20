@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<section class="page-hero">
+  <div class="container narrow">
+    <a class="back-link" href="{{ '/agenda/' | relative_url }}">&larr; Semua agenda</a>
+    <p class="eyebrow">Agenda Gereja</p>
+    <h1>{{ page.title }}</h1>
+    <p class="lead">{{ page.date_text }} · {{ page.time }} · {{ page.location }}</p>
+  </div>
+</section>
+<section class="page-content">
+  <div class="container narrow prose">{{ content }}</div>
+</section>
+

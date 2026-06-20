@@ -1,0 +1,41 @@
+title: GTM Jemaat Elim Lebbeng
+tagline: Gereja Toraja Mamasa
+description: Website resmi GTM Jemaat Elim Lebbeng — tempat bertumbuh dalam iman, persekutuan, dan pelayanan.
+logo: /assets/images/logo-gtm.jpg
+url: ""
+baseurl: ""
+lang: id-ID
+timezone: Asia/Jakarta
+
+permalink: /renungan/:title/
+paginate: 6
+paginate_path: "/renungan/halaman-:num/"
+
+collections:
+  events:
+    output: true
+    permalink: /agenda/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      category: Renungan
+  - scope:
+      path: ""
+      type: events
+    values:
+      layout: event
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

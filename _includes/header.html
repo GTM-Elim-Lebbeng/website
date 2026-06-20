@@ -1,0 +1,23 @@
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }}">
+      <img class="brand-logo" src="{{ '/assets/images/logo-gtm.jpg' | relative_url }}" alt="Logo GTM">
+      <span>
+        <strong>GTM Jemaat</strong>
+        <small>Elim Lebbeng</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Buka menu</span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Navigasi utama">
+      {% for item in site.data.navigation %}
+        <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}class="active"{% endif %}>{{ item.title }}</a>
+      {% endfor %}
+      <a class="button button-small" href="{{ '/kontak/' | relative_url }}#kunjungi">Kunjungi Kami</a>
+    </nav>
+  </div>
+</header>
