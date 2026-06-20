@@ -1,0 +1,28 @@
+# Hasil build Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Dependensi Ruby/Bundler lokal
+.bundle/
+vendor/
+
+# Berkas sementara dan log
+*.log
+*.tmp
+*.swp
+*~
+
+# Sistem operasi
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.idea/
+.vscode/
+
+# Berkas lingkungan lokal
+.env
+.env.*
+!.env.example
+
