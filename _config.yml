@@ -2,8 +2,8 @@ title: GTM Jemaat Elim Lebbeng
 tagline: Gereja Toraja Mamasa
 description: Website resmi GTM Jemaat Elim Lebbeng — tempat bertumbuh dalam iman, persekutuan, dan pelayanan.
 logo: /assets/images/logo-gtm.jpg
-url: ""
-baseurl: "https://elimlebbeng.deo.my.id/"
+url: "https://elimlebbeng.deo.my.id"
+baseurl: "https://elimlebbeng.deo.my.id"
 lang: id-ID
 timezone: Asia/Jakarta
 
